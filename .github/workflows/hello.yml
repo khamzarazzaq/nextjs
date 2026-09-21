@@ -28,15 +28,3 @@ jobs:
 
       - name: "Typecheck"
         run: npm run typecheck
-
-      - name: "Setup PHP"
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: "8.3"
-          extensions: mbstring, intl
-
-      - name: "setup composer"
-        uses: php-actions/composer@v6
-        continue-on-error: true
-        with:
-          php_version: "8.3"
