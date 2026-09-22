@@ -25,7 +25,7 @@ jobs:
           node-version: ${{ matrix.node }}
           cache: npm
 
-      - name: "Node Version {{ matrix.os }} - {{ matrix.node }}"
+      - name: "Node Version ${{ matrix.os }} - ${{ matrix.node }}"
         run: node --version
 
       - name: "Install dependencies"
