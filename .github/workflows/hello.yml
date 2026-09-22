@@ -26,10 +26,11 @@ jobs:
           cache: npm
 
       - name: "Node Version ${{ matrix.os }} - ${{ matrix.node }}"
-        run: node --version
-        run: echo "Node Version ${{ matrix.os }} - ${{ matrix.node }}"
-        run: echo "Secret: ${{ secret.TESTSECRET }}"
-        run: echo "Env Var: ${{ env.TESTENVVAR }}"
+        run: |
+          node --version
+          echo "Node Version ${{ matrix.os }} - ${{ matrix.node }}"
+          echo "Secret is configured: ${{ secrets.TESTSECRET != '' }}"
+          echo "Env Var: ${{ vars.TESTVARIABLE }}"
 
       - name: "Install dependencies"
         run: npm ci
