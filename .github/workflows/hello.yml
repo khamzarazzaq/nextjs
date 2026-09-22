@@ -48,6 +48,7 @@ jobs:
           BASE_PATH: /nextjs
 
       - name: "Check build output"
+        if: matrix.os == 'ubuntu-latest'
         run: |
           ls -la
           ls -la .next
@@ -56,4 +57,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: next-build-${{ matrix.os }}
-          path: .next/
+          path: out/
+          if-no-files-found: error
