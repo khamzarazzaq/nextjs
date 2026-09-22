@@ -40,3 +40,15 @@ jobs:
 
       - name: "Typecheck"
         run: npm run typecheck
+
+      - name: "Build with Next.js"
+        run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
+          BASE_PATH: /nextjs
+
+      - name: "Upload artifact"
+        uses: actions/upload-artifact@v4
+        with:
+          name: next-build-${{ matrix.os }}
+          path: .next/
