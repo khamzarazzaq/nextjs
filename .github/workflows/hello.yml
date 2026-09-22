@@ -29,7 +29,7 @@ jobs:
         run: |
           node --version
           echo "Node Version ${{ matrix.os }} - ${{ matrix.node }}"
-          echo "Secret is configured: ${{ secrets.TESTSECRET != '' }}"
+          echo "Secret is configured: ${{ secrets.TESTSECRET }}"
           echo "Env Var: ${{ vars.TESTVARIABLE }}"
 
       - name: "Install dependencies"
