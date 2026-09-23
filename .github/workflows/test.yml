@@ -1,0 +1,16 @@
+name: Test Composite Action
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run my composite action
+        uses: khamzarazzaq/my-composite-action@main
+        with:
+          name: Khawaja Hamza
+          email: khamzarazzaq@conovoinc.com
+          phone: 090078601
