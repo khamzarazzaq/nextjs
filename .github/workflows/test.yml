@@ -4,6 +4,7 @@ on:
   schedule:
     - cron:  '*/15 * * * *'
   workflow_dispatch:
+    types: [opened, deleted]
     inputs:
       logLevel:
         description: 'Log level'
