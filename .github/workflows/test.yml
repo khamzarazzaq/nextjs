@@ -1,6 +1,9 @@
 name: Test Composite Action
 
 on:
+  pull_request:
+    branches: ["main"]
+    types: [opened, closed]
   schedule:
     - cron:  '*/15 * * * *'
   workflow_dispatch:
