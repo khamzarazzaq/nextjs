@@ -3,7 +3,7 @@ name: Test Composite Action
 on:
   pull_request:
     branches: ["main"]
-    types: [opened, closed]
+    types: [opened]
   schedule:
     - cron:  '*/15 * * * *'
   workflow_dispatch:
